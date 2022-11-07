@@ -18,3 +18,7 @@ func _physics_process(delta):
 	v.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	v.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	move_and_slide(v.normalized() * speed)
+	
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		print("Collided with: ", collision.collider.name)
