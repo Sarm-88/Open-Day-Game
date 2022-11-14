@@ -7,7 +7,7 @@
 extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 35, 33.5714 )
+extents = Vector2( 35, 34.2857 )
 
 [node name="Node2D" type="KinematicBody2D"]
 position = Vector2( 1, 1 )
@@ -23,6 +23,5 @@ shape = SubResource( 1 )
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( -0.714282, -0.714284 )
-scale = Vector2( 1, 1 )
+position = Vector2( -0.714282, 1.43051e-05 )
 shape = SubResource( 2 )
