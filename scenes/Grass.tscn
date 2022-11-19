@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/ArtPacks/1bitpack_kenney_1.2/Tilesheet/monochrome-transparent_packed.png" type="Texture" id=1]
+
+[node name="Grass" type="Sprite"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
