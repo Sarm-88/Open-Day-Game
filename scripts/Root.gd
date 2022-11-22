@@ -7,6 +7,7 @@ onready var player = $Player
 
 
 var grass = preload("res://scenes/Grass.tscn")
+var bullet = preload("res://scenes/Bullet.tscn")
 
 var grass_amount = 10
 var tile_size = 16 * 5
@@ -30,3 +31,9 @@ func _process(delta):
 		label.text = "bingus"
 	else:
 		label.text = String(mouse_offset.x) + ", " + String(mouse_offset.y)
+
+
+func _on_Player_shoot(end_of_barrell):
+	var bullet_instance = bullet.instance()
+	bullet_instance.global_position = end_of_barrell.global_position
+	add_child(bullet_instance)
