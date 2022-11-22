@@ -2,7 +2,7 @@ extends Node2D
 
 
 onready var grass_holder = $GrassHolder
-onready var label = $Label
+onready var label = $Debug
 onready var player = $Player
 
 

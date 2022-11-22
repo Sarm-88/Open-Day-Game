@@ -10,8 +10,6 @@ onready var gun = $Gun
 onready var gun_sprite = $Gun/Sprite
 onready var end_of_barrell = $Gun/Sprite/EndOfBarrell
 
-onready var label = $Label
-
 
 var bullet = preload("res://scenes/Bullet.tscn")
 
@@ -47,8 +45,7 @@ func _process(delta):
 	
 	# Camera Move
 	var camera_offset = (mouse - self.position).normalized()
-	print(camera_offset)
-	if mouse.distance_to(self.position) < 300:
+	if mouse.distance_to(self.position) < 300: # Move camera to center if close to player
 		camera_offset = Vector2(0, 0)
 	
 	camera.position = Vector2(camera_offset.x * 30, camera_offset.y * 30)
@@ -59,4 +56,4 @@ func _unhandled_input(event):
 		get_tree().quit()
 	
 	if Input.is_action_just_pressed("shoot"):
-		print(get_global_mouse_position())
+		pass

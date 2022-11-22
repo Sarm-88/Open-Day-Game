@@ -65,7 +65,7 @@ region_enabled = true
 region_rect = Rect2( 624, 144, 16, 16 )
 
 [node name="EndOfBarrell" type="Position2D" parent="Gun/Sprite"]
-position = Vector2( 9.28572, -1.19209e-07 )
+position = Vector2( 17.8571, -1.19209e-07 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
