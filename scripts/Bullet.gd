@@ -11,6 +11,7 @@ var speed = 600
 func _ready():
 	var mouse = get_global_mouse_position()
 	vel = (mouse - position).normalized()
+	look_at(mouse)
 
 
 func _physics_process(delta):
