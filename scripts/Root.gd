@@ -9,8 +9,10 @@ onready var player = $Player
 var grass = preload("res://scenes/Grass.tscn")
 var bullet = preload("res://scenes/Bullet.tscn")
 
+
 var grass_amount = 10
 var tile_size = 16 * 5
+
 
 func _ready():
 	randomize()

@@ -76,5 +76,3 @@ func _unhandled_input(event):
 		if shoot_timer.is_stopped():
 			emit_signal("shoot", end_of_barrell)
 			shoot_timer.start()
-		
-		
