@@ -38,6 +38,7 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 960, 540 )
 scale = Vector2( 5, 5 )
 script = ExtResource( 2 )
 

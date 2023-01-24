@@ -29,7 +29,7 @@ func _process(delta):
 	label.rect_position = Vector2(int(mouse.x), int(mouse.y)) + Vector2(50, 50)
 	
 	if mouse.distance_to(player.position) < 300:
-		label.text = "bingus"
+		label.text = "radius"
 	else:
 		label.text = String(mouse_offset.x) + ", " + String(mouse_offset.y)
 
