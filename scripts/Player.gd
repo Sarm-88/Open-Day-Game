@@ -78,3 +78,8 @@ func _unhandled_input(event):
 			emit_signal("shoot", end_of_barrell)
 			shoot_timer.start()
 			shoot_sound.play()
+			
+			
+			
+			
+			# Todo: 
