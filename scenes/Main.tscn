@@ -26,10 +26,10 @@ margin_bottom = 14.0
 [node name="Label" type="Label" parent="UI"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -106.0
-margin_right = 107.0
+margin_left = -106.5
+margin_right = 106.5
 margin_bottom = 47.0
 custom_fonts/font = SubResource( 1 )
-text = "Score: 100"
+text = "Jeremy"
 
 [connection signal="shoot" from="Player" to="." method="_on_Player_shoot"]
