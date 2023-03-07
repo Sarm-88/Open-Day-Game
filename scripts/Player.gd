@@ -3,7 +3,6 @@ extends KinematicBody2D
 
 signal shoot
 
-
 onready var sprite = $Sprite
 onready var collision = $CollisionShape2D
 onready var anim_player = $AnimationPlayer
@@ -26,6 +25,9 @@ var mouse = Vector2.ZERO
 
 
 var shake_amount = 0
+
+func _ready():
+	Globals.player = self
 
 
 func _physics_process(delta):
@@ -53,11 +55,11 @@ func _process(delta):
 		anim_player.play("RESET")
 	
 	# Camera Move
-	var camera_offset = (mouse - self.position).normalized()
-	if mouse.distance_to(self.position) < 300: # Move camera to center if close to player
-		camera_offset = Vector2(0, 0)
+	# var camera_offset = (mouse - self.position).normalized()
+	# if mouse.distance_to(self.position) < 300: # Move camera to center if close to player
+	#	camera_offset = Vector2(0, 0)
 	
-	camera.position = Vector2(camera_offset.x * 20, camera_offset.y * 20)
+	# camera.position = Vector2(camera_offset.x * 20, camera_offset.y * 20)
 	
 	# Camera Shake
 	if shake_amount > 0:
@@ -78,8 +80,3 @@ func _unhandled_input(event):
 			emit_signal("shoot", end_of_barrell)
 			shoot_timer.start()
 			shoot_sound.play()
-			
-			
-			
-			
-			# Todo: 

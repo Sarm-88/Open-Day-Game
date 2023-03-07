@@ -19,3 +19,9 @@ func _physics_process(delta):
 	
 	if bullet_timer.is_stopped():
 		queue_free()
+
+
+func _on_Bullet_area_entered(area):
+	if area.is_in_group("Enemy"):
+		area.kill()
+		self.queue_free()

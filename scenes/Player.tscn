@@ -60,7 +60,7 @@ anims/walk = SubResource( 3 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Sprite" type="Sprite" parent="Gun"]
-modulate = Color( 0.756863, 0.0705882, 0.121569, 1 )
+modulate = Color( 0.4, 0.607843, 0.737255, 1 )
 position = Vector2( 25, 0 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -68,10 +68,6 @@ region_rect = Rect2( 624, 144, 16, 16 )
 
 [node name="EndOfBarrell" type="Position2D" parent="Gun"]
 position = Vector2( 36.5714, -1.19209e-07 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-smoothing_enabled = true
 
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.2
