@@ -28,6 +28,7 @@ var shake_amount = 0
 
 func _ready():
 	Globals.player = self
+	self.add_to_group("Player")
 
 
 func _physics_process(delta):
@@ -80,3 +81,6 @@ func _unhandled_input(event):
 			emit_signal("shoot", end_of_barrell)
 			shoot_timer.start()
 			shoot_sound.play()
+
+func kill():
+	print("Dead")

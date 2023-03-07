@@ -34,3 +34,8 @@ func _physics_process(delta):
 
 func kill():
 	self.queue_free()
+
+
+func _on_Enemy_body_entered(body):
+	if body.is_in_group("Player"):
+		body.kill()
