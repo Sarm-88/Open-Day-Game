@@ -27,6 +27,7 @@ func _ready():
 	player = Globals.player
 	
 	
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	position -= (self.position - player.position).normalized() * speed
 
