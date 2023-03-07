@@ -1,2 +1,5 @@
 # Open-Day-Game
-Hello
+My game for the MI open day 2023.
+
+### TODO:
+
