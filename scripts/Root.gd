@@ -4,6 +4,7 @@ extends Node2D
 onready var grass_holder = $GrassHolder
 onready var label = $Debug
 onready var player = $Player
+onready var score = $UI/Label
 
 onready var camera = $Camera2D
 

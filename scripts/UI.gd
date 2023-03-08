@@ -1,8 +1,19 @@
 extends CanvasLayer
 
-var score = 0
 
-onready var label = $Label
+onready var score = $Score
+onready var timer_label = $TimerLabel
+onready var timer = $TimerLabel/Timer
 
 func _ready():
-	label.text = "Score: " + str(score)
+	Globals.score = 0
+	score.text = "Score: " + str(Globals.score)
+
+
+func _process(delta):
+	score.text = "Score: " + str(Globals.score)
+	timer_label.text = "Time Remaining: " + str(int(timer.time_left))
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://scenes/GameOver.tscn")

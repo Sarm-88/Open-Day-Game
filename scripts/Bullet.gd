@@ -23,5 +23,5 @@ func _physics_process(delta):
 
 func _on_Bullet_area_entered(area):
 	if area.is_in_group("Enemy"):
-		area.kill()
+		area.kill(10)
 		self.queue_free()

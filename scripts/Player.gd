@@ -72,7 +72,8 @@ func _process(delta):
 
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
+		# get_tree().quit()
+		get_tree().change_scene("res://scenes/Start.tscn")
 	
 	if Input.is_action_just_pressed("shoot"):
 		shake_amount = 5
@@ -81,6 +82,9 @@ func _unhandled_input(event):
 			emit_signal("shoot", end_of_barrell)
 			shoot_timer.start()
 			shoot_sound.play()
-
+			
+	if Input.is_action_just_pressed("debug"):
+		get_tree().change_scene("res://scenes/GameOver.tscn")
+			
 func kill():
 	print("Dead")

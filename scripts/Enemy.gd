@@ -1,6 +1,7 @@
 extends Area2D
 
 onready var sprite = $Sprite
+signal dead
 
 var player
 var speed
@@ -15,7 +16,7 @@ func _ready():
 		384 + (int(rand_range(0, 8)) * 16),
 		16 + (int(rand_range(0, 8)) * 16))
 	
-	speed = int(rand_range(3, 7))
+	speed = int(rand_range(5, 10))
 	
 	screen_edges.append(Vector2.ZERO)
 	screen_edges.append(Vector2(get_viewport().size.x,0))
@@ -32,10 +33,18 @@ func _physics_process(delta):
 	position -= (self.position - player.position).normalized() * speed
 
 
-func kill():
+func kill(score_value):
+	Globals.score += score_value
+	emit_signal("dead")
 	self.queue_free()
 
 
 func _on_Enemy_body_entered(body):
 	if body.is_in_group("Player"):
+		if Globals.score > 0:
+			Globals.score -= 10
+			self.kill(0)
+		else:
+			self.kill(0)
+			
 		body.kill()
