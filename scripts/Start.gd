@@ -15,6 +15,6 @@ func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Main.tscn")
 	
 
-func _unhandled_input(event):
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
+#func _unhandled_input(event):
+#	if Input.is_action_just_pressed("quit"):
+#		get_tree().quit()
