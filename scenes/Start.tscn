@@ -88,7 +88,7 @@ text = "Controls:
  W - Up
  A - Left
  S - Down
- D - Down
+ D - Right
  Mouse 1 - Shoot"
 
 [node name="Highscore" type="Label" parent="."]
