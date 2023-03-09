@@ -16,7 +16,7 @@ func _ready():
 		384 + (int(rand_range(0, 8)) * 16),
 		16 + (int(rand_range(0, 8)) * 16))
 	
-	speed = int(rand_range(5, 10))
+	speed = int(rand_range(7, 10))
 	
 	screen_edges.append(Vector2.ZERO)
 	screen_edges.append(Vector2(get_viewport().size.x,0))
